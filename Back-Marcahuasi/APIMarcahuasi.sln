@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marcahuasi", "Marcahuasi\Marcahuasi.csproj", "{FE69C29F-0DBC-45A8-BB61-860126750A74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marcahuasi.Modelos", "Marcahuasi.Modelos\Marcahuasi.Modelos.csproj", "{4A6F0243-0274-4DF0-A94E-C0A348D7739B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marcahuasi.DTOs", "Marcahuasi.DTOs\Marcahuasi.DTOs.csproj", "{19A8AD46-A730-437F-9F56-6EA0494B93BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marcahuasi.Repositorio", "Marcahuasi.Repositorio\Marcahuasi.Repositorio.csproj", "{53DBE8E1-E32F-4AB9-81FE-57D80747E5D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marcahuasi.Utilidades", "Marcahuasi.Utilidades\Marcahuasi.Utilidades.csproj", "{27494A8F-A830-46F9-BF92-112442FE0480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marcahuasi.Negocio", "Marcahuasi.Negocio\Marcahuasi.Negocio.csproj", "{0E790A9E-9A89-449A-A812-A9C35BF95C91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE69C29F-0DBC-45A8-BB61-860126750A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE69C29F-0DBC-45A8-BB61-860126750A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE69C29F-0DBC-45A8-BB61-860126750A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE69C29F-0DBC-45A8-BB61-860126750A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6F0243-0274-4DF0-A94E-C0A348D7739B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6F0243-0274-4DF0-A94E-C0A348D7739B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6F0243-0274-4DF0-A94E-C0A348D7739B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6F0243-0274-4DF0-A94E-C0A348D7739B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A8AD46-A730-437F-9F56-6EA0494B93BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A8AD46-A730-437F-9F56-6EA0494B93BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A8AD46-A730-437F-9F56-6EA0494B93BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A8AD46-A730-437F-9F56-6EA0494B93BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DBE8E1-E32F-4AB9-81FE-57D80747E5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DBE8E1-E32F-4AB9-81FE-57D80747E5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DBE8E1-E32F-4AB9-81FE-57D80747E5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DBE8E1-E32F-4AB9-81FE-57D80747E5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27494A8F-A830-46F9-BF92-112442FE0480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27494A8F-A830-46F9-BF92-112442FE0480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27494A8F-A830-46F9-BF92-112442FE0480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27494A8F-A830-46F9-BF92-112442FE0480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E790A9E-9A89-449A-A812-A9C35BF95C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E790A9E-9A89-449A-A812-A9C35BF95C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E790A9E-9A89-449A-A812-A9C35BF95C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E790A9E-9A89-449A-A812-A9C35BF95C91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB075A3D-CFC4-481F-A3B4-503F7FF88A4C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,116 @@
+[
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "CredencialesDelAdministrador",
+    "RelativePath": "Administrador/VerCredenciales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.DashBoardIngresosController",
+    "Method": "MostrarGrafico",
+    "RelativePath": "DashBoardIngresos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.IngresoController",
+    "Method": "ActualizarRegistro",
+    "RelativePath": "Ingreso/ActualizarIngreso",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingreso",
+        "Type": "Marcahuasi.DTOs.DTOActualizarIngreso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.IngresoController",
+    "Method": "RegistrosBasicos",
+    "RelativePath": "Ingreso/ListarRegistrosBasicos/{dni}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.IngresoController",
+    "Method": "RegistrosCompletos",
+    "RelativePath": "Ingreso/ListarRegistrosCompletos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtros",
+        "Type": "Marcahuasi.DTOs.FiltrosDeBusqueda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.IngresoController",
+    "Method": "UltimosRegistros",
+    "RelativePath": "Ingreso/ListarUltimosRegistros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.IngresoController",
+    "Method": "RegistroIngreso",
+    "RelativePath": "Ingreso/RegistrarIngreso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingreso",
+        "Type": "Marcahuasi.DTOs.DTOIngreso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.NacionalidadController",
+    "Method": "ListarNacionalidad",
+    "RelativePath": "Nacionalidad/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.TarifaPagoController",
+    "Method": "ListarTarifasDePago",
+    "RelativePath": "TarifaPago/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

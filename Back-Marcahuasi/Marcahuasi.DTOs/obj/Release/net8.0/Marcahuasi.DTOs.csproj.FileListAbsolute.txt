@@ -1,0 +1,12 @@
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\bin\Release\net8.0\Marcahuasi.DTOs.deps.json
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\bin\Release\net8.0\Marcahuasi.DTOs.dll
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\bin\Release\net8.0\Marcahuasi.DTOs.pdb
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.AssemblyInfoInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.AssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.sourcelink.json
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.dll
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\refint\Marcahuasi.DTOs.dll
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\Marcahuasi.DTOs.pdb
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi.DTOs\obj\Release\net8.0\ref\Marcahuasi.DTOs.dll

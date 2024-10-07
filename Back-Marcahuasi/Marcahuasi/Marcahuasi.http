@@ -1,0 +1,6 @@
+@Marcahuasi_HostAddress = http://localhost:5267
+
+GET {{Marcahuasi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
