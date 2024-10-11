@@ -16,7 +16,7 @@ namespace Marcahuasi.Repositorio.Interfaces
         Task<List<VMRegistrosCompletos>> ObtenerRegistrosCompletos(FiltrosDeBusqueda filtro);
 
         //Metodos Setters
-        Task<bool> RegistrarIngreso(DTOIngreso ingreso);
+        Task<bool> RegistrarIngreso(DTORegistroIngreso ingreso);
         Task<bool> ActualizarIngreso(DTOActualizarIngreso ingreso);
 
     }

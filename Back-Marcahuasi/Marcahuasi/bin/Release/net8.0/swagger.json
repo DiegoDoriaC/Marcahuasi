@@ -5,92 +5,382 @@
     "version": "1.0"
   },
   "paths": {
-    "/WeatherForecast": {
+    "/Administrador/VerCredenciales": {
       "get": {
         "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "Administrador"
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Administrador/EnvioCodigoConfirmacion": {
+      "get": {
+        "tags": [
+          "Administrador"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Administrador/ValidarCodigoConfirmacion/{codigo}": {
+      "post": {
+        "tags": [
+          "Administrador"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "codigo",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Administrador/ActualizarContracenia/{contracenia}": {
+      "put": {
+        "tags": [
+          "Administrador"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "contracenia",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Administrador/ActualizarAdministrador": {
+      "put": {
+        "tags": [
+          "Administrador"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WeatherForecast"
-              }
+              "$ref": "#/definitions/DTOAdministrador"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Administrador/IngresarCredenciales": {
+      "post": {
+        "tags": [
+          "Administrador"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DTOAdministradorLogeo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/DashBoardIngresos/Listar": {
+      "get": {
+        "tags": [
+          "DashBoardIngresos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Ingreso/ListarUltimosRegistros": {
+      "get": {
+        "tags": [
+          "Ingreso"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Ingreso/ListarRegistrosBasicos/{dni}": {
+      "get": {
+        "tags": [
+          "Ingreso"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dni",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Ingreso/ListarRegistrosCompletos": {
+      "get": {
+        "tags": [
+          "Ingreso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/FiltrosDeBusqueda"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Ingreso/RegistrarIngreso": {
+      "post": {
+        "tags": [
+          "Ingreso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DTOIngreso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Ingreso/ActualizarIngreso": {
+      "put": {
+        "tags": [
+          "Ingreso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DTOActualizarIngreso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Nacionalidad/Listar": {
+      "get": {
+        "tags": [
+          "Nacionalidad"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TarifaPago/Listar": {
+      "get": {
+        "tags": [
+          "TarifaPago"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
     }
   },
   "definitions": {
-    "DateOnly": {
+    "DTOActualizarIngreso": {
       "type": "object",
       "properties": {
-        "year": {
+        "idIngreso": {
           "format": "int32",
           "type": "integer"
         },
-        "month": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "day": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "dayOfWeek": {
-          "$ref": "#/definitions/DayOfWeek"
-        },
-        "dayOfYear": {
+        "idTarifa": {
           "format": "int32",
           "type": "integer",
           "readOnly": true
         },
-        "dayNumber": {
-          "format": "int32",
-          "type": "integer",
-          "readOnly": true
+        "observacion": {
+          "type": "string"
         }
       }
     },
-    "DayOfWeek": {
-      "format": "int32",
-      "enum": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "type": "integer"
-    },
-    "WeatherForecast": {
+    "DTOAdministrador": {
       "type": "object",
       "properties": {
-        "date": {
-          "$ref": "#/definitions/DateOnly"
+        "nombreAdministrador": {
+          "type": "string"
         },
-        "temperatureC": {
+        "numeroTelefono": {
+          "type": "string"
+        },
+        "contraceña": {
+          "type": "string"
+        }
+      }
+    },
+    "DTOAdministradorLogeo": {
+      "type": "object",
+      "properties": {
+        "numeroTelefono": {
+          "type": "string"
+        },
+        "contraceña": {
+          "type": "string"
+        }
+      }
+    },
+    "DTOIngreso": {
+      "type": "object",
+      "properties": {
+        "nombres": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "numeroDocumento": {
+          "type": "string"
+        },
+        "idNacionalidad": {
           "format": "int32",
           "type": "integer"
         },
-        "temperatureF": {
+        "idDepartamento": {
           "format": "int32",
-          "type": "integer",
+          "type": "integer"
+        },
+        "idTarifa": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaIngreso": {
+          "format": "date-time",
+          "type": "string",
           "readOnly": true
         },
-        "summary": {
+        "modificado": {
+          "type": "boolean"
+        },
+        "fechaModificacion": {
+          "format": "date-time",
           "type": "string"
+        },
+        "observacion": {
+          "type": "string"
+        },
+        "userRegister": {
+          "type": "string"
+        }
+      }
+    },
+    "FiltrosDeBusqueda": {
+      "type": "object",
+      "properties": {
+        "dia": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "mes": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "anio": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaInicio": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaFin": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "tarifaProcedencia": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     }

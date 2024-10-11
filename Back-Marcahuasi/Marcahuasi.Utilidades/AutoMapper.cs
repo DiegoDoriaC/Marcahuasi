@@ -51,7 +51,8 @@ namespace Marcahuasi.Utilidades
             //Creacion de los Data Transfer Objects (DTO)
 
             #region Administrador
-            CreateMap<DTOAdministrador, Administrador>();
+            CreateMap<DTOAdministrador, Administrador>()
+                .ForMember(destino => destino.Nombre, options => options.MapFrom(origen => origen.NombreAdministrador));
             #endregion Administrador
         }
     }

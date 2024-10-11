@@ -9,9 +9,11 @@ create table Administrador
 	Nombre varchar(25) not null,
 	NumeroTelefono varchar(12) not null,
 	Contraceña varchar(15) not null ,
-	FechaModificacion datetime	 default getdate()
+	FechaModificacion datetime default getdate()
 )
 go
+
+alter table administrador alter column NumeroTelefono varchar(12)
 
 create table Departamentos
 (
@@ -192,5 +194,11 @@ go;
 	select * from Departamentos
 	select * from TarifaPagos
 	select * from Turistas
+	select * from Administrador
+
+	update Administrador set
+	Nombre = 'Diego Doria Crisostomo',
+	NumeroTelefono = '928109364',
+	Contraceña = '8b6aaf6d8999c00a62ab9027911120e1865d638cb9a6472a8a10833d3a615b56'
 
 

@@ -1,6 +1,80 @@
 [
   {
     "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "ActualizarAdministrador",
+    "RelativePath": "Administrador/ActualizarAdministrador",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "administrador",
+        "Type": "Marcahuasi.DTOs.DTOAdministrador",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "CambiarContracenia",
+    "RelativePath": "Administrador/ActualizarContracenia/{contracenia}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contracenia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "EnvioDelCodigoDeConfirmacion",
+    "RelativePath": "Administrador/EnvioCodigoConfirmacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "Ingresar",
+    "RelativePath": "Administrador/IngresarCredenciales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "administrador",
+        "Type": "Marcahuasi.DTOs.DTOAdministradorLogeo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
+    "Method": "ValidarCodigoDeConfirmacion",
+    "RelativePath": "Administrador/ValidarCodigoConfirmacion/{codigo}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Marcahuasi.Controllers.AdministradorController",
     "Method": "CredencialesDelAdministrador",
     "RelativePath": "Administrador/VerCredenciales",
     "HttpMethod": "GET",
@@ -55,7 +129,7 @@
     "ContainingType": "Marcahuasi.Controllers.IngresoController",
     "Method": "RegistrosCompletos",
     "RelativePath": "Ingreso/ListarRegistrosCompletos",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -87,7 +161,7 @@
     "Parameters": [
       {
         "Name": "ingreso",
-        "Type": "Marcahuasi.DTOs.DTOIngreso",
+        "Type": "Marcahuasi.DTOs.DTORegistroIngreso",
         "IsRequired": true
       }
     ],

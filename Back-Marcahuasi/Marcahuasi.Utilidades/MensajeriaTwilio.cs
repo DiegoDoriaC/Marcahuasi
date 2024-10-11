@@ -28,6 +28,7 @@ namespace Marcahuasi.Utilidades
 
                 int codigo = Math.Abs(BitConverter.ToInt32(numeroAleatorio, 0)) % 1000000;
                 return codigo.ToString("D6");
+                //return "123456";
             }
         }
 
@@ -40,12 +41,11 @@ namespace Marcahuasi.Utilidades
 
                 TwilioClient.Init(sid, token);
 
-                var opcionesDelMensaje = new CreateMessageOptions(
-                new PhoneNumber(number));
-                opcionesDelMensaje.MessagingServiceSid = Environment.GetEnvironmentVariable("twilioServiceSID");
-                opcionesDelMensaje.Body = codigo;
-                var message = await MessageResource.CreateAsync(opcionesDelMensaje);
-                Console.WriteLine(message.Body);
+
+                var message = await MessageResource.CreateAsync(
+                body: "Su código de confirmación es: " + codigo + ", no lo comparta con nadie.",
+                from: new Twilio.Types.PhoneNumber("+19412137522"),
+                to: new Twilio.Types.PhoneNumber("+51" + number));
                 return true;
             }
             catch

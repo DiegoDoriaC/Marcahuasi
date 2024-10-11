@@ -19,8 +19,6 @@ namespace Marcahuasi.Repositorio
         private readonly MarcahuasiContext _context;
         private readonly IMapper _mapper;
 
-        string codigoDeVerificacion = "";
-
         public AdministradorRepositorio(MarcahuasiContext context, IMapper mapper)
         {
             _context = context;
@@ -33,9 +31,11 @@ namespace Marcahuasi.Repositorio
             {
                 Administrador adminMappeado = _mapper.Map<Administrador>(administrador);
                 adminMappeado.IdAdministrado = 1;
+                adminMappeado.Contraceña = EncriptacionDeContracenia.GetSHA256(administrador.Contraceña!);
                 var entity = _context.Administrador.Update(adminMappeado);
+                bool response = entity.State == EntityState.Modified ? true : false;
                 await _context.SaveChangesAsync();
-                return entity.State == EntityState.Modified ? true : false;
+                return response;
             }
             catch
             {
@@ -47,17 +47,15 @@ namespace Marcahuasi.Repositorio
         {
             try
             {
-                Administrador administrador = new()
-                {
-                    IdAdministrado = 1,
-                    Contraceña = contracenia
-                };
-                var respuesta = _context.Administrador.Update(administrador);
+                Administrador administrador = new() { IdAdministrado = 1 };
+                _context.Administrador.Attach(administrador);
+                administrador.Contraceña = EncriptacionDeContracenia.GetSHA256(contracenia);
+                _context.Entry(administrador).Property(a => a.Contraceña).IsModified = true;
                 await _context.SaveChangesAsync();
-                return respuesta.State == EntityState.Modified;
+                return true;
             }
             catch
-            {
+            {                
                 throw;
             }
         }
@@ -67,8 +65,10 @@ namespace Marcahuasi.Repositorio
             try
             {
                 Administrador? administradorActual = await _context.Administrador.FirstOrDefaultAsync();
-                codigoDeVerificacion = MensajeriaTwilio.GenerarCodigo();
-                return await MensajeriaTwilio.EnviarCodigo(codigoDeVerificacion, administradorActual!.NumeroTelefono);
+                string codigoDeVerificacion = MensajeriaTwilio.GenerarCodigo();
+                CacheRedis.GuardarCodigo(codigoDeVerificacion);
+                bool response = await MensajeriaTwilio.EnviarCodigo(codigoDeVerificacion, administradorActual!.NumeroTelefono);
+                return response;
             }
             catch
             {
@@ -80,7 +80,7 @@ namespace Marcahuasi.Repositorio
         {
             try
             {
-                return MensajeriaTwilio.ComprobarCodigo(codigoDeVerificacion, codigoRecibido);
+                return MensajeriaTwilio.ComprobarCodigo(CacheRedis.ObtenerCodigo(), codigoRecibido);
             }
             catch
             {
@@ -112,12 +112,13 @@ namespace Marcahuasi.Repositorio
                 administradorFormateado.NombreCompleto = administrador?.Nombre;
                 if (administrador != null)
                 {
-                    string celular = administrador.NumeroTelefono.ToString().Substring(-3);
+                    string celular = administrador.NumeroTelefono.ToString().Substring(6);
                     string celularFormateado = "******" + celular;
                     int numeroCaraacteresContracenia = administrador.Contraceña.Length;
-                    string contraceniaFormateada = new ('*', numeroCaraacteresContracenia);
+                    string contraceniaFormateada = "**************";
                     administradorFormateado.NumeroCelular = celularFormateado;
                     administradorFormateado.Contracenia = contraceniaFormateada;
+                    administradorFormateado.FechaModificacion = administrador.FechaModificacion;
                 }
                 return administradorFormateado;
             }

@@ -9,10 +9,21 @@ namespace Marcahuasi.DTOs
     public class FiltrosDeBusqueda
     {
         public DateTime? Dia { get; set; }
-        public int? Mes { get; set; }
-        public int? Anio { get; set; }
         public DateTime? FechaInicio { get; set; }
         public DateTime? FechaFin { get; set; }
+        public int? Mes { get; set; }
+        public int? Anio { get; set; }
         public int? TarifaProcedencia { get; set; }
+
+        public FiltrosDeBusqueda()
+        {
+            Dia = null;
+            FechaInicio = null;
+            FechaFin = null;
+            Mes = null;
+            Anio = null;
+            TarifaProcedencia = null;
+        }
+
     }
 }

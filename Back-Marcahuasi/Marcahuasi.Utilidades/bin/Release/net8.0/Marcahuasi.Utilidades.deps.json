@@ -713,7 +713,10 @@
       },
       "Marcahuasi.DTOs/1.0.0": {
         "runtime": {
-          "Marcahuasi.DTOs.dll": {}
+          "Marcahuasi.DTOs.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Marcahuasi.Modelos/1.0.0": {
@@ -721,7 +724,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
         "runtime": {
-          "Marcahuasi.Modelos.dll": {}
+          "Marcahuasi.Modelos.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

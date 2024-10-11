@@ -14,4 +14,10 @@ public partial class Administrador
     public string Contraceña { get; set; } = null!;
 
     public DateTime? FechaModificacion { get; }
+
+    public Administrador()
+    {
+        FechaModificacion = DateTime.Now;
+    }
+
 }

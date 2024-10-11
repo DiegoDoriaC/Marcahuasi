@@ -34,7 +34,7 @@ namespace Marcahuasi.Controllers
             return listado.Any() ? Ok(listado) : NotFound(new { mensaje = "Registro no encontrado" });
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ListarRegistrosCompletos")]
         public async Task<IActionResult> RegistrosCompletos([FromBody] FiltrosDeBusqueda filtros)
         {
@@ -44,7 +44,7 @@ namespace Marcahuasi.Controllers
 
         [HttpPost]
         [Route("RegistrarIngreso")]
-        public async Task<IActionResult> RegistroIngreso([FromBody] DTOIngreso ingreso)
+        public async Task<IActionResult> RegistroIngreso([FromBody] DTORegistroIngreso ingreso)
         {
             return await _repository.RegistrarIngreso(ingreso) ? Ok() : BadRequest();
         }

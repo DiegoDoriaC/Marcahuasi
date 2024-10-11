@@ -115,7 +115,7 @@ namespace Marcahuasi.Repositorio
             }
         }
 
-        public async Task<bool> RegistrarIngreso(DTOIngreso ingreso)
+        public async Task<bool> RegistrarIngreso(DTORegistroIngreso ingreso)
         {
             try
             {

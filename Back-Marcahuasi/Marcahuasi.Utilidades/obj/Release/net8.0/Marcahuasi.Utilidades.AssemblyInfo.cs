@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Marcahuasi.Utilidades")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60e427f9429faecdf2f9d97d22109731ede1643e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da5ae8fbec57f14ea3779db404bcecc6c1d4a6f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Marcahuasi.Utilidades")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Marcahuasi.Utilidades")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

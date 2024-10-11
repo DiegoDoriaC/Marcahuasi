@@ -244,3 +244,5 @@ C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuas
 C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi\obj\Debug\net8.0\Marcahuasi.sourcelink.json
 C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi\bin\Debug\net8.0\Twilio.dll
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\diego\OneDrive\Escritorio\Proyecto Marcahuasi\Back-Marcahuasi\Marcahuasi\bin\Debug\net8.0\StackExchange.Redis.dll

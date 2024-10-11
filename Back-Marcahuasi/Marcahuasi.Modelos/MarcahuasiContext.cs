@@ -38,7 +38,7 @@ public partial class MarcahuasiContext : DbContext
             entity.ToTable("Administrador");
 
             entity.Property(e => e.Contraceña)
-                .HasMaxLength(15)
+                .HasMaxLength(64)
                 .IsUnicode(false);
             entity.Property(e => e.Nombre)
                 .HasMaxLength(25)

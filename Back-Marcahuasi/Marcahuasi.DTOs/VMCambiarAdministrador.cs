@@ -11,6 +11,6 @@ namespace Marcahuasi.DTOs
         public string? NumeroCelular { get; set; }
         public string? Contracenia { get; set; }
         public string? NombreCompleto { get; set; }
-        public DateTime? FechaModificacion { get; }
+        public DateTime? FechaModificacion { get; set; }
     }
 }
